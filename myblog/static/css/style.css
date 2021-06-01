@@ -1,0 +1,38 @@
+.body {
+    margin-bottom: 60px;
+}
+
+.html {
+    position: absolute;
+    min-height: 100%;
+}
+
+
+.carousel-item {
+    height: 18rem;
+}
+
+.home-slider {
+    padding: 0;
+}
+
+.home-slider h5{
+    font-size: 16px;
+}
+
+.home-slider p{
+    font-size: 12px;
+}
+
+.carousel-caption {
+    bottom: 100px;
+}
+
+.down {
+    position: absolute;
+    bottom: absolute;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background-color: #334745;
+}
