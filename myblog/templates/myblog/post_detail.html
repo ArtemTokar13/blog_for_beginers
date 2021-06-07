@@ -1,0 +1,34 @@
+{% extends './base.html' %}
+{% load static %}
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block header %}
+    {% include './block/header.html' %}
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8">
+            <nav aria-label="breadcrumb" class="mt-4">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">{{ post.title }}</li>
+                </ol>
+            </nav>
+            <img class="img-fluid rounded " src="{{ post.image.url }}" alt="">
+            <hr>
+            <p class="lead">
+            {{ post.description|safe }}
+            </p>
+            <hr>
+            <p class="lead text-right">Author: {{ post.author }}</p>
+            <hr>
+            <p class="text-right">Created: {{ post.created_at }}</p>
+            <hr>
+            {% include './block/comments.html' %}
+        </div>
+        {% include './block/aside.html' %}
+    </div>
+</div>
+{% endblock %}
