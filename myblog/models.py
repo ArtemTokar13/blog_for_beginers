@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.utils import timezone
+from taggit.managers import TaggableManager
 
 
 class Post(models.Model):
@@ -10,6 +11,7 @@ class Post(models.Model):
     image = models.ImageField()
     created_at = models.DateField(default=timezone.now)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
+    tag = TaggableManager()
 
     def __str__(self):
-        return self.title
+        return self.title # what text we will see in the posts list in admin interface
