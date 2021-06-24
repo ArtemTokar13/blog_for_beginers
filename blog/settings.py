@@ -132,3 +132,7 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'artem.tokar13@gmail.com'
 EMAIL_HOST_PASSWORD = 'jyyvaafyhwfrmnvk'
 
+try:
+    from .local_settings import *
+except ImportError:
+    print('Can`t find local_settings')
