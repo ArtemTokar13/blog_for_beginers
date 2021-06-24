@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'r!9wmi$*u7+4mcdj0ljj&d$*6+k3n1(7w^^8wpds*(2vjji2sr'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['artemtouch.pythonanywhere.com']
 
 
 # Application definition
